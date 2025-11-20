@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DRIDI Chahd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Bouton Dark Mode -->
+    <button id="darkModeBtn">🌙</button>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Chahd</div>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <ul class="menu">
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#interets">Intérêts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1 id="typing"></h1>
+        <p>Étudiante en Technologies de l’Informatique | Future ingénieure embarquée</p>
+    </header>
+
+    <!-- Profil -->
+    <section id="profil" class="fade-in">
+        <h2>Profil</h2>
+        <p>
+            Étudiante en 3ème année Licence Technologies de l’Informatique à l’ISET de Radès, 
+            dotée de compétences en programmation embarquée et en conception électronique. 
+            Mon objectif est de mettre en œuvre ces compétences dans le cadre d’un stage PFE 
+            axé sur les systèmes embarqués performants et fiables, à partir de janvier 2026.
+        </p>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="fade-in">
+        <h2>Compétences</h2>
+
+        <h3>Langages de programmation</h3>
+        <ul>
+            <li>JavaScript</li>
+            <li>C++</li>
+            <li>SQL</li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ul>
+
+        <h3>Environnements</h3>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Arduino IDE</li>
+            <li>MicroC</li>
+            <li>Proteus</li>
+            <li>XAMPP</li>
+        </ul>
+
+        <h3>Microcontrôleurs</h3>
+        <ul>
+            <li>Arduino</li>
+            <li>STM32</li>
+            <li>ESP32</li>
+        </ul>
+
+        <h3>Langues</h3>
+        <ul>
+            <li>Arabe</li>
+            <li>Français</li>
+            <li>Anglais</li>
+        </ul>
+    </section>
+
+    <!-- Expériences -->
+    <section id="experiences" class="fade-in">
+        <h2>Expériences</h2>
+
+        <div class="experience">
+            <h3>Sagemcom – Stagiaire en systèmes embarqués</h3>
+            <p>
+                Conception d’un système de pointage RFID utilisant ESP32 et lecteur RFID, 
+                gestion des données SQL, et réalisation d’une carte de commande 
+                pour piloter 10 relais.
+            </p>
+        </div>
+
+        <div class="experience">
+            <h3>Sagemcom – Stagiaire en développement logiciel</h3>
+            <p>
+                Développement d’un site web statique de vente des produits de l’entreprise 
+                et immersion dans un environnement professionnel.
+            </p>
+        </div>
+    </section>
+
+    <!-- Centres d’intérêt -->
+    <section id="interets" class="fade-in">
+        <h2>Centres d’intérêt</h2>
+        <ul>
+            <li>Natation</li>
+            <li>Cuisine</li>
+            <li>Bénévolat et engagement associatif</li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <ul>
+            <li><strong>Téléphone :</strong> +216 29 560 900</li>
+            <li><strong>Email :</strong> dridichahd01@gmail.com</li>
+        </ul>
+    </section>
+
+    <!-- Bouton retour haut -->
+    <button id="upBtn" onclick="scrollToTop()">⤴</button>
+
+    <footer>
+        <p>© 2025 - Portfolio de DRIDI Chahd</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
