@@ -1,46 +1,39 @@
-// Menu responsive
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-}
+// Toggle theme (light / dark-ish)
+const themeBtn = document.getElementById('themeToggle');
+themeBtn && themeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('darkmode');
+  if (document.documentElement.classList.contains('darkmode')) {
+    document.documentElement.style.setProperty('--bg','#0f1222');
+    document.documentElement.style.setProperty('--card','#0b0b12');
+    document.documentElement.style.setProperty('--accent-text','#f5f5fb');
+  } else {
+    document.documentElement.style.removeProperty('--bg');
+    document.documentElement.style.removeProperty('--card');
+    document.documentElement.style.removeProperty('--accent-text');
+  }
+});
 
-// Dark mode
-document.getElementById("darkModeBtn").onclick = () => {
-    document.body.classList.toggle("dark");
-};
+// Mobile menu toggle (simple)
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav');
+menuToggle && menuToggle.addEventListener('click', () => {
+  if (!navLinks) return;
+  if (navLinks.style.display === 'flex') {
+    navLinks.style.display = '';
+  } else {
+    navLinks.style.display = 'flex';
+  }
+});
 
-// Effet machine à écrire
-const text = "Bienvenue sur mon Portfolio, je suis Chahd";
-let index = 0;
-
-function typeEffect() {
-    document.getElementById("typing").textContent = text.slice(0, index++);
-    if (index <= text.length) {
-        setTimeout(typeEffect, 80);
-    }
-}
-typeEffect();
-
-// Animation lors du scroll
-const elements = document.querySelectorAll('.fade-in');
-
-function showSections() {
-    elements.forEach(el => {
-        const pos = el.getBoundingClientRect().top;
-        if (pos < window.innerHeight - 100) {
-            el.classList.add('visible');
-        }
-    });
-}
-window.addEventListener("scroll", showSections);
-showSections();
-
-// Scroll to top button
-window.onscroll = () => {
-    document.getElementById("upBtn").style.display = 
-        (document.documentElement.scrollTop > 200) ? "block" : "none";
-};
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+// Smooth scroll for sidebar links
+document.querySelectorAll('.nav a').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
+    a.classList.add('active');
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    // close mobile menu
+    if (window.innerWidth <= 900) navLinks.style.display = '';
+  });
+});
