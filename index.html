@@ -1,165 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DRIDI Chahd — Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DRIDI Chahd</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="profile">
-        <img src="avatar.jpg" alt="Photo de Chahd" class="avatar">
-        <h1>DRIDI<br><span>Chahd</span></h1>
-        <p class="role">Étudiante • Systèmes embarqués</p>
-      </div>
 
-      <nav class="nav">
-        <a href="#about" class="active">À propos</a>
-        <a href="#skills">Compétences</a>
-        <a href="#experience">Expériences</a>
-        <a href="#projects">Projets</a>
-        <a href="#interests">Intérêts</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- Bouton Dark Mode -->
+    <button id="darkModeBtn">🌙</button>
+    <header>
+        <nav>
+            <div class="logo">Chahd</div>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <ul class="menu">
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#interets">Intérêts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-      <div class="contact-card">
-        <h3>Contact</h3>
-        <p class="small">+216 29 560 900</p>
-        <p class="small">dridichahd01@gmail.com</p>
-        <div class="socials">
-          <a href="#" title="GitHub">GitHub</a>
-          <a href="#" title="LinkedIn">LinkedIn</a>
-        </div>
-        <a class="btn-cv" href="#" download="CV_DRIDI_Chahd.pdf">Télécharger CV</a>
-      </div>
+        <h1 id="typing"></h1>
+        <p>Étudiante en Technologies de l’Informatique | Future ingénieure embarquée</p>
+    </header>
 
-      <p class="copyright">© 2025 Chahd</p>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-      <header class="topbar">
-        <button id="menuToggle" class="hamburger" aria-label="Ouvrir menu">☰</button>
-        <div class="page-title">Portfolio</div>
-        <button id="themeToggle" class="theme-btn" aria-label="changer theme">🌓</button>
-      </header>
-
-      <section id="about" class="card">
-        <h2>À propos</h2>
+    <!-- Profil -->
+    <section id="profil" class="fade-in">
+        <h2>Profil</h2>
         <p>
-          Étudiante en 3ᵉ année Licence Technologies de l’Informatique à l’ISET de Radès, 
-          spécialisée en systèmes embarqués et conception électronique. 
-          Je recherche un stage PFE à partir de janvier 2026 pour développer des systèmes embarqués performants et fiables.
+            Étudiante en 3ème année Licence Technologies de l’Informatique à l’ISET de Radès, 
+            dotée de compétences en programmation embarquée et en conception électronique. 
+            Mon objectif est de mettre en œuvre ces compétences dans le cadre d’un stage PFE 
+            axé sur les systèmes embarqués performants et fiables, à partir de janvier 2026.
         </p>
-      </section>
+    </section>
 
-      <section id="skills" class="card">
+    <!-- Compétences -->
+    <section id="competences" class="fade-in">
         <h2>Compétences</h2>
 
-        <div class="skills-grid">
-          <div>
-            <h4>Langages</h4>
-            <ul class="chips">
-              <li>JavaScript</li><li>C++</li><li>SQL</li><li>PHP</li><li>Python</li>
-            </ul>
-          </div>
+        <h3>Langages de programmation</h3>
+        <ul>
+            <li>JavaScript</li>
+            <li>C++</li>
+            <li>SQL</li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ul>
 
-          <div>
-            <h4>Microcontrôleurs</h4>
-            <ul class="chips">
-              <li>Arduino</li><li>STM32</li><li>ESP32</li>
-            </ul>
-          </div>
+        <h3>Environnements</h3>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Arduino IDE</li>
+            <li>MicroC</li>
+            <li>Proteus</li>
+            <li>XAMPP</li>
+        </ul>
 
-          <div>
-            <h4>Outils & Environnements</h4>
-            <ul class="chips">
-              <li>VS Code</li><li>ArduinoIDE</li><li>MicroC</li><li>Proteus</li><li>XAMPP</li>
-            </ul>
-          </div>
+        <h3>Microcontrôleurs</h3>
+        <ul>
+            <li>Arduino</li>
+            <li>STM32</li>
+            <li>ESP32</li>
+        </ul>
 
-          <div>
-            <h4>Langues</h4>
-            <ul class="chips">
-              <li>Arabe</li><li>Français</li><li>Anglais</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        <h3>Langues</h3>
+        <ul>
+            <li>Arabe</li>
+            <li>Français</li>
+            <li>Anglais</li>
+        </ul>
+    </section>
 
-      <section id="experience" class="card">
+    <!-- Expériences -->
+    <section id="experiences" class="fade-in">
         <h2>Expériences</h2>
 
-        <div class="timeline">
-          <div class="item">
-            <time>2024 — SagemCom (Ben Arous)</time>
-            <h3>Stagiaire — Systèmes embarqués</h3>
-            <p>Conception d’un système de pointage RFID (ESP32) avec base SQL. Réalisation d’une carte de commande pour piloter 10 relais.</p>
-          </div>
-
-          <div class="item">
-            <time>2023 — SagemCom (Ben Arous)</time>
-            <h3>Stagiaire — Développement logiciel</h3>
-            <p>Création d’un site web statique de vente des produits de l’entreprise. Renforcement des compétences techniques et relationnelles.</p>
-          </div>
+        <div class="experience">
+            <h3>Sagemcom – Stagiaire en systèmes embarqués</h3>
+            <p>
+                Conception d’un système de pointage RFID utilisant ESP32 et lecteur RFID, 
+                gestion des données SQL, et réalisation d’une carte de commande 
+                pour piloter 10 relais.
+            </p>
         </div>
-      </section>
 
-      <section id="projects" class="card">
-        <h2>Projets</h2>
-
-        <div class="cards-row">
-          <article class="project">
-            <h4>Pointage RFID</h4>
-            <p>ESP32 + lecteur RFID + base SQL — Système de pointage pour entreprise.</p>
-          </article>
-
-          <article class="project">
-            <h4>Carte 10 Relais</h4>
-            <p>Conception d'une carte de commande pour piloter 10 charges électriques en sécurité isolée.</p>
-          </article>
-
-          <article class="project">
-            <h4>Site e-commerce statique</h4>
-            <p>Site de démonstration pour les produits SagemCom — HTML/CSS.</p>
-          </article>
+        <div class="experience">
+            <h3>Sagemcom – Stagiaire en développement logiciel</h3>
+            <p>
+                Développement d’un site web statique de vente des produits de l’entreprise 
+                et immersion dans un environnement professionnel.
+            </p>
         </div>
-      </section>
+    </section>
 
-      <section id="interests" class="card">
+    <!-- Centres d’intérêt -->
+    <section id="interets" class="fade-in">
         <h2>Centres d’intérêt</h2>
-        <ul class="list">
-          <li>Natation</li>
-          <li>Cuisine</li>
-          <li>Bénévolat & Engagement associatif (Enactus, Robotek, Croissant Rouge)</li>
+        <ul>
+            <li>Natation</li>
+            <li>Cuisine</li>
+            <li>Bénévolat et engagement associatif</li>
         </ul>
-      </section>
+    </section>
 
-      <section id="contact" class="card">
+    <!-- Contact -->
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <p>Tu peux me contacter : <strong>+216 29 560 900</strong> — <a href="mailto:dridichahd01@gmail.com">dridichahd01@gmail.com</a></p>
+        <ul>
+            <li><strong>Téléphone :</strong> +216 29 560 900</li>
+            <li><strong>Email :</strong> dridichahd01@gmail.com</li>
+        </ul>
+    </section>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Formulaire non connecté — utiliser le mail.');">
-          <input type="text" placeholder="Ton nom" required>
-          <input type="email" placeholder="Ton email" required>
-          <textarea placeholder="Message..." rows="4" required></textarea>
-          <button class="btn" type="submit">Envoyer</button>
-        </form>
-      </section>
+    <!-- Bouton retour haut -->
+    <button id="upBtn" onclick="scrollToTop()">⤴</button>
 
-      <footer class="footer">
-        <p>Portfolio — DRIDI Chahd · ISET Radès</p>
-      </footer>
-    </main>
-  </div>
+    <footer>
+        <p>© 2025 - Portfolio de DRIDI Chahd</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
